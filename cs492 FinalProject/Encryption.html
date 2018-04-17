@@ -1,0 +1,82 @@
+<html><head>
+<title>Bob</title>
+<script language="javascript">
+<!-- hide from old browsers
+var newWindow = null
+
+function result(form) {
+var M = (form.message.options[form.message.selectedIndex].value)
+var U = (form.message.options[form.message.selectedIndex].text)
+var E = form.exponent.value
+var N = form.Nvalue.value
+
+C = Math.pow(M,E) % N
+
+if (newWindow == null) {
+     var newWindow = window.open("","","height=200,width=300")
+     }
+     newWindow.document.write("<html><body bgcolor='FFFFFF'>")
+     newWindow.document.write("Letter, " + U + " is converted to")
+     newWindow.document.write(" number: " + M)
+     newWindow.document.write("<p> C = M^E mod N = ")
+     newWindow.document.write(M + "^" + E+" mod "+N+" = "+C)
+     newWindow.document.write("<p>Thus, the encrypted message is <b>" + C)
+     newWindow.document.write("<p>Record the encrypted message!</b>")
+     newWindow.document.write("</body></html>")
+     newWindow.document.close()
+
+}
+
+// end script hiding -->
+</script>
+
+</head><body bgcolor="#ffffff">
+
+<center>
+<h1>ENCRYPTION PAGE</h1>
+</center>
+
+<font size="+1">
+<b>OBJECTIVE:</b><br>
+The purpose is to encrypt a letter using RSA algorithm. Knowing E and N is
+required.
+</font>
+<p>
+
+<b>Record the encrypted message!</b>
+</p><p>
+</p><hr>
+<p>
+
+
+</p><form>
+<p>
+Pick a letter to cipher:
+<select name="message">
+<option value="1" selected="">A </option><option value="2">B </option><option value="3">C
+</option><option value="4">D </option><option value="5">E </option><option value="6">F
+</option><option value="7">G </option><option value="8">H </option><option value="9">I
+</option><option value="10">J 
+
+</option></select>
+
+</p><p>
+
+Enter Alice' Exponent key, E: <input name="exponent" type="text" value="0">
+
+</p><p>
+
+Enter Alice' N value: <input name="Nvalue" type="text" value="0">
+</p><p>
+<input onclick="result(this.form)" type="button" value="Encrypt"></p><p>
+
+</p></form>
+<center>
+  |<a href="index.html" target="">Main Page</a> |<a href="KeyGeneration.html" target="">Key 
+  Generation Page</a> |<a href="Decryption.html" target="">Decryption Page</a>| 
+</center>
+
+
+
+
+</body></html>
