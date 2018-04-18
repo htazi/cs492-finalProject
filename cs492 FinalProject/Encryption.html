@@ -13,10 +13,10 @@ var N = form.Nvalue.value
 C = Math.pow(M,E) % N
 
 if (newWindow == null) {
-     var newWindow = window.open("","","height=200,width=300")
+     var newWindow = window.open("","","height=400,width=400")
      }
      newWindow.document.write("<html><body bgcolor='FFFFFF'>")
-     newWindow.document.write("Letter, " + U + " is converted to")
+     newWindow.document.write("Message, " + U + " is converted to")
      newWindow.document.write(" number: " + M)
      newWindow.document.write("<p> C = M^E mod N = ")
      newWindow.document.write(M + "^" + E+" mod "+N+" = "+C)
@@ -33,13 +33,12 @@ if (newWindow == null) {
 </head><body bgcolor="#ffffff">
 
 <center>
-<h1>ENCRYPTION PAGE</h1>
+<h1>ENCRYPTION</h1>
 </center>
 
 <font size="+1">
 <b>OBJECTIVE:</b><br>
-The purpose is to encrypt a letter using RSA algorithm. Knowing E and N is
-required.
+The purpose is to encrypt a message using the public keys of RSA algorithm  E and N.
 </font>
 <p>
 
@@ -51,14 +50,18 @@ required.
 
 </p><form>
 <p>
-Pick a letter to cipher:
+please choose your messsage to cipher:
 <select name="message">
-<option value="1" selected="">A </option><option value="2">B </option><option value="3">C
-</option><option value="4">D </option><option value="5">E </option><option value="6">F
-</option><option value="7">G </option><option value="8">H </option><option value="9">I
-</option><option value="10">J 
-
-</option></select>
+<option value="1" selected="">Hello Alice! </option>
+<option value="2">This is Bob! </option>
+<option value="3">How are you?</option>
+<option value="4">Can you call me when you have a chance </option>
+<option value="5">How is your familly? </option>
+<option value="6">Can you help me with my final project?</option>
+<option value="7">Can we meet?</option>
+<option value="8">see you then</option>
+<option value="9">Take Care</option>
+<option value="10">Thank you</option></select>
 
 </p><p>
 
@@ -72,8 +75,8 @@ Enter Alice' N value: <input name="Nvalue" type="text" value="0">
 
 </p></form>
 <center>
-  |<a href="index.html" target="">Main Page</a> |<a href="KeyGeneration.html" target="">Key 
-  Generation Page</a> |<a href="Decryption.html" target="">Decryption Page</a>| 
+  |<a href="home.html" target="">Home</a> |<a href="KeyGeneration.html" target="">RSA Key 
+  Generation</a> |<a href="Decryption.html" target="">Decryption</a>| 
 </center>
 
 
