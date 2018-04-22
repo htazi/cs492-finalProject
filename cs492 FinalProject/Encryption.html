@@ -1,85 +1,127 @@
-<html><head>
-<title>Bob</title>
-<script language="javascript">
-<!-- hide from old browsers
-var newWindow = null
+<!doctype html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+<!--SCRIPT -->	
+	<script language="javascript">
+	<!-- hide from old browsers
+	var newWindow = null
 
-function result(form) {
-var M = (form.message.options[form.message.selectedIndex].value)
-var U = (form.message.options[form.message.selectedIndex].text)
-var E = form.exponent.value
-var N = form.Nvalue.value
+	function result(form) {
+	var M = (form.message.options[form.message.selectedIndex].value)
+	var U = (form.message.options[form.message.selectedIndex].text)
+	var E = form.exponent.value
+	var N = form.Nvalue.value
 
-C = Math.pow(M,E) % N
+	C = Math.pow(M,E) % N
 
-if (newWindow == null) {
-     var newWindow = window.open("","","height=400,width=400")
-     }
-     newWindow.document.write("<html><body bgcolor='FFFFFF'>")
-     newWindow.document.write("Message, " + U + " is converted to")
-     newWindow.document.write(" number: " + M)
-     newWindow.document.write("<p> C = M^E mod N = ")
-     newWindow.document.write(M + "^" + E+" mod "+N+" = "+C)
-     newWindow.document.write("<p>Thus, the encrypted message is <b>" + C)
-     newWindow.document.write("<p>Record the encrypted message!</b>")
-     newWindow.document.write("</body></html>")
-     newWindow.document.close()
+	if (newWindow == null) {
+		 var newWindow = window.open("","","height=400,width=400")
+		 }
+		 newWindow.document.write("<html><body bgcolor='FFFFFF'>")
+		 newWindow.document.write("Message, " + U + " is converted to")
+		 newWindow.document.write(" number: " + M)
+		 newWindow.document.write("<p> C = M^E mod N = ")
+		 newWindow.document.write(M + "^" + E+" mod "+N+" = "+C)
+		 newWindow.document.write("<p>Thus, the encrypted message is <b>" + C)
+		 newWindow.document.write("<p>Record the encrypted message!</b>")
+		 newWindow.document.write("</body></html>")
+		 newWindow.document.close()
 
-}
-
+	}
 // end script hiding -->
-</script>
+	</script>
+	
+<title>Bob</title>
+<link href="singlePageTemplate.css" rel="stylesheet" type="text/css">
+<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
+<script>var __adobewebfontsappname__="dreamweaver"</script>
+<script src="http://use.edgefonts.net/source-sans-pro:n2:default.js" type="text/javascript"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+<!-- Main Container -->
+<div class="container"> 
+  <!-- Navigation -->
+  <header> <a href="">
+    <h4 class="logo">WELCOME</h4>
+    </a>
+    <nav>
+      <ul>
+        <li><a href="home.html">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li> <a href="Contact.html">CONTACT</a></li>
+      </ul>
+    </nav>
+  </header>
 
-</head><body bgcolor="#ffffff">
+<!-- Tittle -->
+  <section class="hero" id="hero">
+    <h2 class="hero_header">ENCRYPTION</h2>
+  </section>
 
 <center>
-<h1>ENCRYPTION</h1>
+	<h1>ENCRYPTION</h1>
 </center>
 
-<font size="+1">
-<b>OBJECTIVE:</b><br>
-The purpose is to encrypt a message using the public keys of RSA algorithm  E and N.
-</font>
-<p>
+<div class="informationhead"><b>OBJECTIVE:</b></div>
+<div class="information2">	
+	The purpose is to encrypt a message using the public keys of RSA algorithm E and N.<br>
+	<b>Record the encrypted message!</b>
+</div>
+<hr>
 
-<b>Record the encrypted message!</b>
-</p><p>
-</p><hr>
-<p>
+<div class="information2">
+	<form>
+		<p>
+		Please choose your messsage to cipher:
+		<select name="message">
+		<option value="1" selected="">Hello Alice! </option>
+		<option value="2">This is Bob! </option>
+		<option value="3">How are you?</option>
+		<option value="4">Can you call me when you have a chance </option>
+		<option value="5">How is your familly? </option>
+		<option value="6">Can you help me with my final project?</option>
+		<option value="7">Can we meet?</option>
+		<option value="8">see you then</option>
+		<option value="9">Take Care</option>
+		<option value="10">Thank you</option></select>
 
+		</p><p>
 
-</p><form>
-<p>
-please choose your messsage to cipher:
-<select name="message">
-<option value="1" selected="">Hello Alice! </option>
-<option value="2">This is Bob! </option>
-<option value="3">How are you?</option>
-<option value="4">Can you call me when you have a chance </option>
-<option value="5">How is your familly? </option>
-<option value="6">Can you help me with my final project?</option>
-<option value="7">Can we meet?</option>
-<option value="8">see you then</option>
-<option value="9">Take Care</option>
-<option value="10">Thank you</option></select>
+		Enter Alice' Exponent key, E: <input name="exponent" type="text" value="0">
 
-</p><p>
+		</p><p>
 
-Enter Alice' Exponent key, E: <input name="exponent" type="text" value="0">
-
-</p><p>
-
-Enter Alice' N value: <input name="Nvalue" type="text" value="0">
-</p><p>
-<input onclick="result(this.form)" type="button" value="Encrypt"></p><p>
-
-</p></form>
+		Enter Alice' N value: <input name="Nvalue" type="text" value="0">
+		</p><p>
+		<input onclick="result(this.form)" type="button" value="Encrypt"></p>
+	</form>
+</div>
+	
 <center>
   |<a href="home.html" target="">Home</a> |<a href="KeyGeneration.html" target="">RSA Key 
   Generation</a> |<a href="Decryption.html" target="">Decryption</a>| 
 </center>
+	
+<!--changed until here vero-->
 
-
-
-
-</body></html>
+<!-- More Info Section -->
+<footer>
+</footer>
+  
+<!-- Copyrights Section -->
+  
+    
+</div>
+<!-- Main Container Ends -->
+</body>
+</html>
