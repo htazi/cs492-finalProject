@@ -1,0 +1,14 @@
+create table Users (
+	id int (11) not null PRIMARY KEY AUTO_INCREMENT,
+    firstname varchar (100) not null,
+    lastname varchar (100) not null,
+    password varchar (50) not null,
+    repassword varchar (50) not null,
+    firsSEcQt varchar (128) not null,
+    answer1 varchar (128) not null,
+    secondSecQt varchar (128) not null,
+    answer2 varchar (128) not null,
+    thirdSecQt varchar (128) not null,
+    answer3 varchar (128) not null
+    
+);
