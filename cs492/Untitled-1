@@ -12,3 +12,10 @@ create table Users (
     answer3 varchar (128) not null
     
 );
+
+$sql = "INSERT INTO users (user_first, user_last, user_uid, password, re_password, user_first_sec_qt, user_answer1, user_second_sec_Qt, user_answer2, user_third_sec_qt, user_answer3) VALUES ('$first', '$last', '$uid', '$pwd', '$re_pwd', '$sec1', '$ans1', '$sec2', '$ans2', '$sec3', '$ans3');";
+
+    mysqli_query($conn, $sql);
+        
+    header ("Location: ../cs492/CreateUser.html?signup=success");
+    
