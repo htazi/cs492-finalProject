@@ -1,3 +1,7 @@
+<?php
+    session_start(); 
+?>
+
 <!doctype html>
 <html lang="en-US">
 <head>
@@ -38,13 +42,13 @@
   <!-- About Section -->
   <section class="about" id="about">
     <h1 class="hidden">SignIn</h1>
-	  <form action="signup.php">
+	  <form action="login.php">
   		<fieldset>
     		<legend>Sign In:</legend>
     			User Name:<br>
     		<input type="text" name="username" value="" required><br>
     			Password:<br>
-    		<input type="text" name="password" value="" required><br><br>
+    		<input type="password" name="password" value="" required><br><br>
     		<input type="submit" value="Login">
 			<input type="button" value="Create New User">
   		</fieldset>
