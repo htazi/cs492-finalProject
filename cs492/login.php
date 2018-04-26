@@ -1,7 +1,7 @@
 <?php
 
 
-session_start(); 
+//session_start(); 
 
 if (isset($_POST['submit'])){
     
@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
     // Check if inputs are empty
     
     if(empty($uid)  || empty ($pwd)){
-         header("Location: ../cs492/home.html?login=empty");
+         header("Location: ../cs492/index.html?login=empty");
          exit ();
         
     }else{
@@ -22,30 +22,17 @@ if (isset($_POST['submit'])){
         $result = mysqli_query($conn, $sql);
         $resultCheck = mysqli_num_rows($result);
         if ($resultCheck <1 ){
-            header("Location: ../cs492/home.html?login=error");
+            header("Location: ../cs492/index.html?login=error");
             exit ();
         }else{
             if ($row = mysqli_fetch_assoc($result)) {
                 // De-hashing the password
                 $hashedPwdCheck = password_verify($pwd, $row['password']);
                 if ($hashedPwdCheck == false){
-                     header("Location: ../cs492/home.html?login=error");
+                     header("Location: ../cs492/index.html?login=erro");
                      exit ();
                 }elseif ($hashedPwdCheck == true ) {
-                    // Log in the user here
-                    $_SESSION['u_id'] = $row['user_id'];
-                    $_SESSION['u_firt'] = $row['user_first'];
-                    $_SESSION['u_last'] = $row['user_last'];
-                    $_SESSION['u_uid'] = $row['user_uid'];
-                    $_SESSION['u_pwd'] = $row['password'];
-                    $_SESSION['u_re_pwd'] = $row['re_password'];
-                    $_SESSION['u_sec1'] = $row['user_first_sec_qt'];
-                    $_SESSION['u_ans1'] = $row['user_answer1'];
-                    $_SESSION['u_sec2'] = $row['user_second_sec_qt'];
-                    $_SESSION['u_ans2'] = $row['user_answer2'];
-                    $_SESSION['u_sec3'] = $row['user_third_sec_qt'];
-                    $_SESSION['u_ans3'] = $row['user_answer3'];
-                    header("Location: ../cs492/home.html?login=seccess");
+                    header("Location: ../cs492/questionVerification.html?login=success");
                      exit ();
                 }
             }
@@ -53,7 +40,7 @@ if (isset($_POST['submit'])){
     }
 }else{
     
-    header("Location: ../cs492/home.html?login=error");
+    header("Location: ../cs492/index.html?login=error");
     exit ();
 }
 
