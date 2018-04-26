@@ -45,14 +45,14 @@
   <!-- About SignUp Form -->
   <section class="about" id="about">
     <h1 class="hidden">SignUp</h1>
-	  <form action="signup.php">
+	  <form action="questionVerification.php" method = "POST">
   		<fieldset>
     		<legend>2 Step Verification</legend>
     			Security Question: 
-    			<output name="x" for="a b">   *****complete this from data base</output><br><br>
+            <output name="secqt" >What is the name of the city you were born </output><br>
 			
 				Enter your Answer:
-    			<input type="text" name="questionanswer:" value=""><br>
+    			<input type="text" name="questionanswer" value=""><br>
 			<br>
 			<input type="button" value="Submit">
   		</fieldset>
