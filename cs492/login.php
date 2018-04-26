@@ -29,7 +29,7 @@ if (isset($_POST['submit'])){
                 // De-hashing the password
                 $hashedPwdCheck = password_verify($pwd, $row['password']);
                 if ($hashedPwdCheck == false){
-                     header("Location: ../cs492/index.html?login=erro");
+                     header("Location: ../cs492/index.html?login=errop");
                      exit ();
                 }elseif ($hashedPwdCheck == true ) {
                     header("Location: ../cs492/questionVerification.html?login=success");
