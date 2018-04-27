@@ -24,6 +24,7 @@ if (isset($_POST['submit'])){
         if ($resultCheck <1 ){
             header("Location: ../cs492/questionVerification.html?login=error");
             exit ();
+            
         }else{
             if ($row = mysqli_fetch_assoc($result)) {
                // if ($answer == false{
