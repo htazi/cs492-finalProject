@@ -45,16 +45,34 @@
 <!--</center>-->
     </br>
 
-<div class="informationhead"><b>OBJECTIVE:</b></div>
 <div class="information2">	
-	This application demonstrates two major security concepts.The first one is Two Steps Authentication that verify the user, and secondone is the use of RSA algorithm to secure the communication between the users of the application<br>
-	
+    <ul>
+        <li>In this application, we try to demostrate two major security concepts.<b><i>The 2 steps authentication and RSA algorithm</i></b> </li> 
+        <li>First part: Two-Steps Authentication
+            <ul>
+                <li>In the first step; the user needs to enter the username and password, the application will validate that information with the database,</li> 
+                <li>if it is correct, it will continue with the second step authentication,</li>
+                <li>otherwise, the user will get a login error</li>
+                <li>In the second step, the user needs to answer a personal security question that only he/she knows the answer for that question</li>
+                <li>the application will validate the information provided.</li> 
+                <li>if the user enters the correct credentials, the system will let him login and start a communication session</li>
+                <li>otherwise, the user will get a login error</li>
+            </ul></li>
+        <li>Second Part: RSA Algorithm Implementation
+            <ul>
+                <li>In this application, we consider two users Alice and Bob</li>
+                <li>In the first step, Alice needs to generate her public and private keys</li>
+                <li>Bob uses Alice's public key to encrypt a message for her</li>
+                <li>Alice uses her private key the decrypt Bob's message</li>
+            </ul></li>
+    </ul>    
 </div>
 <hr>
 
 
 	
 <center>
+  |<a href="title.html" target="">Previous</a>
   |<a href="index.html" target="">Next</a>| 
 </center>
 	

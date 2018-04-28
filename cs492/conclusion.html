@@ -47,8 +47,26 @@
 
 <div class="informationhead"><b>conclusion:</b></div>
 <div class="information2">
-    This application demostrate how the 2 steps authentication and RSA algorithm works. In the first part of the application, the user go through the first step that is entering the username and password; in this case the application will validate that information with the data base, if it is correct, it will continue with the second step authentication, that is showing a personal security question that only the user knows the answer, the application will validate the information provided and will show the key generation page, and will let the user communicate with Bob. 
-    
+    <ul>
+        <li>This application demostrate how the 2 steps authentication and RSA algorithm works.</li> 
+        <li>First part: Two-Steps Authentication
+            <ul>
+                <li>In the first step; the user needs to enter the username and password, the application will validate that information with the database,</li> 
+                <li>if it is correct, it will continue with the second step authentication,</li>
+                <li>otherwise, the user will get a login error</li>
+                <li>In the second step, the user needs to answer a personal security question that only he/she knows the answer for that questio,</li>
+                <li>the application will validate the information provided.</li> 
+                <li>if the user enters the correct credentials, the system will let him login and start a communication session</li>
+                <li>otherwise, the user will get a login error</li>
+            </ul></li>
+        <li>Second Part: RSA Algorithm Implementation
+            <ul>
+                <li>In this application, we consider two users Alice and Bob</li>
+                <li>In the first step, Alice needs to generate her public and private keys</li>
+                <li>Bob uses Alice's public key to encrypt a message for her</li>
+                <li>Alice uses her private key the decrypt Bob's message</li>
+            </ul></li>
+    </ul>    
 	
 </div>
 <hr>
