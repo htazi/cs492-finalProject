@@ -28,7 +28,7 @@ if (isset($_POST['submit'])){
         }else{
             if ($row = mysqli_fetch_assoc($result)) {
                // if ($answer == false{
-                     header("Location: ../cs492/KeyGeneration.html?login=success");
+                     header("Location: ../cs492/RSA.html?login=success");
                      exit ();
                 }else{
                     header("Location: ../cs492/questionVerification.html?login=error");
